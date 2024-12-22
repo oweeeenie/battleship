@@ -23,11 +23,11 @@ class Ship {
     // accept grid as a parameter
     if (direction === 'horizontal') {
       for (let i = 0; i < length; i++) {
-        grid[y][x + i] = 1; // use the passed grid
+        grid[y][x + i] = 1;
       }
     } else if (direction === 'vertical') {
       for (let i = 0; i < length; i++) {
-        grid[y + i][x] = 1; // use the passed grid
+        grid[y + i][x] = 1;
       }
     }
   }

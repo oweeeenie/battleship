@@ -1,35 +1,64 @@
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul {
+* {
   margin: 0;
   padding: 0;
-  font-weight: normal;
+  box-sizing: border-box;
 }
 
-ol,
-ul {
-  list-style: none;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.game-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+  gap: 2px;
+}
+
+.board div {
+  width: 40px;
+  height: 40px;
+  background-color: lightblue;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+.board div.hit {
+  background-color: red;
+}
+
+.board div.miss {
+  background-color: lightgray;
+}
+
+.game-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+h2 {
+  text-align: center;
 }
